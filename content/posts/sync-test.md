@@ -1,1 +1,0 @@
----\ntitle: sync-test\ndate: 2026-10-09\n---\n\ntest
