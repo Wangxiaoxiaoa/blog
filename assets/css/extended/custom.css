@@ -1,0 +1,36 @@
+/* Reading progress bar */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.1s ease;
+}
+
+/* Improve code block */
+.post-content pre {
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+/* TOC styling */
+.toc {
+  border-left: 2px solid var(--primary, #2563eb);
+  padding-left: 12px;
+  margin: 1rem 0;
+}
+.toc ul { list-style: none; padding-left: 12px; }
+.toc > ul > li > a { font-weight: 600; }
+
+/* Post meta styling */
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  color: var(--secondary, #71717a);
+  font-size: 0.85rem;
+}

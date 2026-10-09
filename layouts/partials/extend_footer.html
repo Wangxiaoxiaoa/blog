@@ -1,0 +1,21 @@
+<div id="reading-progress" style="position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#2563eb,#7c3aed);width:0%;z-index:9999;transition:width 0.1s;"></div>
+<script>
+(function(){
+  var bar = document.getElementById('reading-progress');
+  if(!bar) return;
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement;
+    var p = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = p + '%';
+  });
+})();
+</script>
+{{ if .IsPage }}
+<span id="busuanzi_container_page_pv" style="display:none;font-size:0.85em;color:var(--fg-muted);">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:2px;">
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+  </svg>
+  <span id="busuanzi_value_page_pv"></span> 次阅读
+</span>
+{{ end }}
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

@@ -1,0 +1,74 @@
+baseURL = 'http://47.93.196.89/'
+languageCode = 'zh-cn'
+defaultContentLanguage = 'zh-cn'
+title = "Ansel的随笔"
+theme = 'PaperMod'
+
+[params]
+  mainSections = ['posts']
+  description = "AI 与技术思考"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = true
+  math = true
+  defaultTheme = "auto"
+  ShowThemeToggle = true
+  disableThemeToggle = false
+
+[params.homeInfoParams]
+  Title = "你好，我是 Ansel 👋"
+  Content = "专注于 AI 与机器学习的开发者，记录学习笔记、技术思考和实践心得。"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com"
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:hello@ansel.xin"
+
+[markup.highlight]
+  style = "monokai"
+  lineNos = false
+
+[markup.goldmark.extensions.passthrough]
+  enabled = false
+
+[markup.goldmark.extensions.passthrough.delimiters]
+  block = [['$$', '$$']]
+  inline = [['$', '$']]
+
+[menus]
+  [[menus.main]]
+    name = "文章"
+    pageRef = "/posts"
+    weight = 1
+  [[menus.main]]
+    name = "归档"
+    pageRef = "/archives"
+    weight = 2
+  [[menus.main]]
+    name = "搜索"
+    pageRef = "/search"
+    weight = 3
+  [[menus.main]]
+    name = "标签"
+    pageRef = "/tags"
+    weight = 4
+  [[menus.main]]
+    name = "关于"
+    pageRef = "/about"
+    weight = 5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params.footer]
+  since = 2026
+
+[params.comments]
+  enabled = false
