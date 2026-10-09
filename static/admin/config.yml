@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: Wangxiaoxiaoa/blog
+  branch: main
+  base_url: http://47.93.196.89
+  auth_endpoint: /auth
+
+media_folder: "static/img"
+public_folder: "/img"
+
+publish_mode: editorial_workflow
+
+locale: "zh_Hans"
+
+collections:
+  - name: "posts"
+    label: "文章"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "摘要", name: "description", widget: "text", required: false }
+      - { label: "封面图", name: "cover", widget: "image", required: false }
+      - { label: "分类", name: "categories", widget: "list", required: false }
+      - { label: "标签", name: "tags", widget: "list", required: false }
+      - { label: "启用公式", name: "math", widget: "boolean", default: false, required: false }
+      - { label: "草稿", name: "draft", widget: "boolean", default: false }
+      - { label: "内容", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "站点设置"
+    files:
+      - name: "config"
+        label: "站点配置"
+        file: "hugo.toml"
+        fields:
+          - { label: "网站标题", name: "title", widget: "string" }
