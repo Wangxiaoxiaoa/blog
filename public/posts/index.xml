@@ -43,5 +43,12 @@
       <guid>http://47.93.196.89/posts/pytorch-basics/</guid>
       <description>从张量到训练循环</description>
     </item>
+    <item>
+      <title></title>
+      <link>http://47.93.196.89/posts/test-auto-push/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://47.93.196.89/posts/test-auto-push/</guid>
+      <description>&lt;p&gt;auto-push test&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
